@@ -3,7 +3,7 @@ version: '3'
 services:
     laravel.test:
         build:
-            context: ./dockerBuild
+            context: ./backend/dockerBuild
             dockerfile: Dockerfile
             args:
                 WWWGROUP: '${WWWGROUP}'
@@ -58,15 +58,18 @@ services:
             - PMA_ARBITRARY=1
 
     node:
-      image: node:18
-      ports:
+        build:
+            context: ./frontend
+            dockerfile: Dockerfile
+        image: node:18
+        ports:
         - '3000:3000'
-      volumes:
+        volumes:
         - ./frontend/:/srv/react-docker
-      working_dir: /srv/react-docker
-      networks:
-          - sail
-      command: 'npm start'
+        working_dir: /srv/react-docker
+        networks:
+            - sail
+        command: 'npm start'
 
 networks:
     sail:
