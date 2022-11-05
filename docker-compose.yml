@@ -3,7 +3,7 @@ version: '3'
 services:
     laravel.test:
         build:
-            context: ./backend/dockerBuild
+            context: ./backend/vendor/laravel/sail/runtimes/8.1
             dockerfile: Dockerfile
             args:
                 WWWGROUP: '${WWWGROUP}'
@@ -63,9 +63,9 @@ services:
             dockerfile: Dockerfile
         image: node:18
         ports:
-        - '3000:3000'
-        volumes:
-        - ./frontend/:/srv/react-docker
+          - '3000:3000'
+        # volumes:
+        #   - ./frontend/:/srv/react-docker
         working_dir: /srv/react-docker
         networks:
             - sail

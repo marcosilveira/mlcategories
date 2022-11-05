@@ -14,7 +14,6 @@ function App() {
     const [buttonBack, setButtonBack] = useState(false);
     const [buttonSelect, setButtonSelect] = useState(false);
     const [categories, setCategories] = useState([]);
-    const [categoriesEnabled, setCategoriesEnabled] = useState(false);
     const [loadCategories, setLoadCategories] = useState(false);
     const [previous, setPrevious] = useState([]);
 

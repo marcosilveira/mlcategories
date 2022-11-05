@@ -3,9 +3,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
 
 function ListItems(props) {
-    const [code, setCode] = useState(0);
-    const [previous, setPrevious] = useState(0);
-
 
     return (
         <a className="list-group-item list-group-item-action" href="#" 
