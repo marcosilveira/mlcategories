@@ -65,8 +65,8 @@ services:
         ports:
           - '3000:3000'
         # volumes:
-        #   - ./frontend/:/srv/react-docker
-        working_dir: /srv/react-docker
+        #   - ./frontend/:/usr/src/app
+        working_dir: /usr/src/app
         networks:
             - sail
         command: 'npm start'
