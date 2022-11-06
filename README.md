@@ -2,7 +2,7 @@ Teste de consumo da API de categorias do Mercadolivre.
 Será feita a importação das categorias e as armazenando em database.
 Possui um exemplo pratico de navegação entre as categorias.
 
-O projeto foi desenvolvido utilizando Laravel 9 no backend e Nodejs no frontend, tudo modularizado em Docker.
+O projeto foi desenvolvido utilizando Laravel 9 no backend e ReactJs no frontend, tudo modularizado em Docker.
 
 Para rodar o projeto execute: ./backend/vendor/bin/sail up -d
 
